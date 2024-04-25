@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -23,7 +24,9 @@ export default function Home() {
     const [items, setItems] = useState<ItemType[]>(sampleList);
 
     const addItem = (newItem: ItemType) => {
+        newItem.id = items.length + 1;
         setItems([...items, newItem]);
+        sampleList = [...sampleList, newItem];
     };
 
     return (
@@ -45,3 +48,4 @@ export default function Home() {
         </>
     );
 }
+

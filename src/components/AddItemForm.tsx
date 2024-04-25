@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import { AddItemFormType } from '../types';
+import { AddItemFormType , ItemType } from '../types';
 
 type AddItemFormProps = {
-    addNewItem: AddItemFormType;
+    addNewItem: (newItem: ItemType) => void;
 };
 
 export default function AddItemForm({ addNewItem }: AddItemFormProps) {
